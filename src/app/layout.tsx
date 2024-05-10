@@ -3,6 +3,7 @@ import "./globals.css"
 import { Roboto } from 'next/font/google'
 import { cn } from "@/lib/utils"
 import { Toaster } from '@/components/ui/toaster'
+import Sidebar from "@/components/sidebar/Sidebar"
 
 const roboto = Roboto({
   weight: ['400', '500', '700'],
@@ -23,10 +24,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={cn('min-h-screen', roboto.className)}>
         <Toaster />
-        {children}
+        <Sidebar />
+        <main className="ml-[270px] p-2">
+          {children}
+        </main>
       </body>
     </html>
   );
