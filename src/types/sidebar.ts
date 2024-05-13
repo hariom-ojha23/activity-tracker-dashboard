@@ -5,9 +5,6 @@ export interface SidebarItem {
     title: string;
     href: string;
     icon: LucideIcon;
-    color?: string;
-    isChidren?: boolean;
-    children?: SidebarItem[];
 }
 
 export interface SidebarProps {
