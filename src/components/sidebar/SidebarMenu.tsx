@@ -17,11 +17,11 @@ export function SidebarMenu({ item }: SidebarMenuProps) {
             className={cn(
                 buttonVariants({ variant: 'ghost' }),
                 'group relative flex h-10 justify-start',
-                path === item.href && 'bg-primary font-bold hover:bg-primary'
+                path === item.href && 'hover:text-white bg-primary font-bold hover:bg-primary text-white'
             )}
         >
             <item.icon className='h-5 w-5' />
-            <span className='absolute left-12 text-sm duration-200'>
+            <span className='absolute left-12 text-sm duration-50'>
                 {item.title}
             </span>
         </Link>
